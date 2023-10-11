@@ -1,0 +1,612 @@
+@import url('https://fonts.cdnfonts.com/css/dm-sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Set a background color for the entire page */
+body {
+  background-color: #2f1893;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+/* ************************************************************************ */
+/* Header */
+header {
+  background-color: #2f1893;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Header Content */
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Logo on the left, navigation on the right */
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 300px;
+  padding-top: 60px;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-right: 150px;
+  padding-top: 60px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+/* End */
+/* ************************************************************ */
+/* Style for a rounded button */
+.rounded-button {
+  background-color: #e93a7d;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* ************************************************************ */
+/* Rounded button form */
+/* Style for the button container */
+.button-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Style for the buttons */
+.button1 {
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 190px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px; /* Add space between the buttons */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflow text */
+  text-overflow: ellipsis;
+}
+
+.button2 {
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 160px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px; /* Add space between the buttons */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflow text */
+  text-overflow: ellipsis;
+}
+.button:hover {
+  background-color: #0056b3;
+  /* You can add other hover effects here if needed */
+}
+
+/* Style for the separator container */
+.separator-container {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+/* Style for the separator line */
+.separator-line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+/* Style for the separator text */
+.separator-text {
+  font-size: 16px;
+  color: #ccc;
+}
+/* End */
+/* ***************************************************************** */
+/* Main Container */
+.container {
+  justify-content: space-around;
+  margin: 20px auto; /* Auto margin horizontally centers the container */
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Right Content */
+.right {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Left Card */
+.left {
+  flex: 1;
+  padding: 20px;
+  color: #fff;
+}
+.left h1 {
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; /* 120.69% */
+  letter-spacing: -1px;
+}
+.left p {
+  padding-top: 25px;
+  padding-bottom: 40px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide the overflow text */
+  text-overflow: ellipsis;
+  color: #1e0e62;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.4px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ************************************************************ */
+/* Text Field start */
+/* Style for a rounded input text field */
+.card .rounded-input {
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 16px;
+}
+/* End */
+
+/* ***************************************************************** */
+
+/* CheckBox Style Start */
+
+/* Checkbox container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  color: grey;
+}
+
+/* Hide the default checkbox input */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #482be7;
+  border-radius: 5px;
+}
+
+/* Custom checkmark (hidden by default) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when the checkbox is checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+  content: '\2713'; /* Checkmark character */
+  font-size: 14px;
+  color: black;
+  padding-left: 3px;
+}
+
+/* Style the checkmark when the checkbox is checked */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #25dac5; /* Green color */
+  border-color: #25dac5; /* Green color */
+}
+/* END */
+/* ************************************************************************** */
+/* Button start */
+.rounded-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+/* END */
+/* ******************************************************************************** */
+/* Form style Start */
+input[type='text'],
+input[type='password'] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.password-toggle {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+/* End */
+
+/* ****************************************************************** */
+
+/* Sign In start */
+
+/* Style for the message container */
+.message-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the message text */
+.message {
+  font-size: 12px;
+  color: grey;
+}
+
+/* Style for the "Sign In" link */
+.sign-in-link {
+  color: #25dac5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s; /* Add a smooth color transition on hover */
+}
+
+.sign-in-link:hover {
+  color: #0056b3;
+}
+
+/* End */
+
+.menu-button {
+  display: none; /* Hide the menu button by default */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* CSS to show the navigation menu when the "active" class is applied */
+nav ul.active {
+  display: block;
+}
+
+/* Making responsive */
+@media screen and (max-width: 768px) {
+  .header-content {
+    padding: 10px;
+  }
+
+  .logo {
+    position: relative;
+    font-size: 20px;
+    padding: 5px 25px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-button {
+    position: relative;
+    display: block;
+  }
+
+  /* End */
+  /* ************************************************************ */
+  /* Style for a rounded button */
+  .rounded-button {
+    background-color: #e93a7d;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  /* ************************************************************ */
+  /* Rounded button form */
+  /* Style for the button container */
+  .button-container {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  /* Style for the buttons */
+  .button1 {
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 75px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px; /* Add space between the buttons */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+    text-overflow: ellipsis;
+  }
+
+  .button2 {
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 58px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 10px; /* Add space between the buttons */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+    text-overflow: ellipsis;
+  }
+  .button:hover {
+    background-color: #0056b3;
+    /* You can add other hover effects here if needed */
+  }
+
+  /* Style for the separator container */
+  .separator-container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+  }
+
+  /* Style for the separator line */
+  .separator-line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+  }
+
+  /* Style for the separator text */
+  .separator-text {
+    font-size: 16px;
+    color: #ccc;
+  }
+  /* End */
+  /* ***************************************************************** */
+  /* Main Container */
+  .container {
+    justify-content: space-around;
+    margin: 20px auto; /* Auto margin horizontally centers the container */
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  /* Right Content */
+  .right {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+  }
+
+  /* Left Card */
+  .left {
+    position: relative;
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+  }
+  .left h1 {
+    position: relative;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px; /* 120.69% */
+    letter-spacing: -1px;
+  }
+  .left p {
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 40px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+  }
+
+  .card h2 {
+    margin-top: 0;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+    text-overflow: ellipsis;
+    color: #1e0e62;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.4px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  /* ************************************************************ */
+  /* Text Field start */
+  /* Style for a rounded input text field */
+  .card .rounded-input {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  /* End */
+
+  /* ***************************************************************** */
+
+  /* CheckBox Style Start */
+
+  /* Checkbox container */
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    color: grey;
+  }
+
+  /* Hide the default checkbox input */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  /* Custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #482be7;
+    border-radius: 5px;
+  }
+
+  /* Custom checkmark (hidden by default) */
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when the checkbox is checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+    content: '\2713'; /* Checkmark character */
+    font-size: 14px;
+    color: black;
+    padding-left: 3px;
+  }
+
+  /* Style the checkmark when the checkbox is checked */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #25dac5; /* Green color */
+    border-color: #25dac5; /* Green color */
+  }
+  /* END */
+  /* ************************************************************************** */
+  /* Button start */
+  .rounded-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  /* END */
+  /* ******************************************************************************** */
+  /* Form style Start */
+  input[type='text'],
+  input[type='password'] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  .password-toggle {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  /* End */
+
+  /* ****************************************************************** */
+
+  /* Sign In start */
+
+  /* Style for the message container */
+  .message-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Style for the message text */
+  .message {
+    font-size: 12px;
+    color: grey;
+  }
+
+  /* Style for the "Sign In" link */
+  .sign-in-link {
+    color: #25dac5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s; /* Add a smooth color transition on hover */
+  }
+
+  .sign-in-link:hover {
+    color: #0056b3;
+  }
+}

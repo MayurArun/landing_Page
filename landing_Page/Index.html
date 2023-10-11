@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo">Startup 3</div>
+        <div class="menu-button">&#9776;</div>
+        <nav>
+          <ul>
+            <li><a href="#" style="color: gray">Overview</a></li>
+            <li><a href="#">Price</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><button class="rounded-button">Purchase</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="left">
+        <h1>Generate Awesome Web Pages</h1>
+        <p>
+          The most important part of the Startup is the samples. The samples
+          form a set of 25 usable pages you can use as is or you can add new
+          blocks
+        </p>
+        <button class="rounded-button">Learn More</button>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <h2>Sign Up Now</h2>
+          <form>
+            <input type="text" class="rounded-input" placeholder="Your email" />
+            <input
+              type="password"
+              class="rounded-input"
+              placeholder="Your password"
+            /><br /><br />
+            <label class="checkbox-container"
+              >I agree to the terms of service
+              <input type="checkbox" id="agreeCheckbox" />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+          <div class="button-container">
+            <button class="button1" style="background-color: #482be7">
+              Sign In
+            </button>
+            <div class="separator-container">
+              <div class="separator-line"></div>
+              <div class="separator-text">or</div>
+              <div class="separator-line"></div>
+            </div>
+            <button class="button2" style="background-color: #1da1f2">
+              Login via Twitter
+            </button>
+
+            <div class="message-container">
+              <p class="message">
+                Do you have an Account?
+                <a href="#" class="sign-in-link">Sign In</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const menuButton = document.querySelector('.menu-button');
+  const navList = document.querySelector('ul');
+
+  menuButton.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
